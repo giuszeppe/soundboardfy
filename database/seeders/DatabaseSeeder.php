@@ -13,6 +13,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        \App\Models\Soundboard::factory(10)
+            ->forArtist()
+            ->hasUsers(1)
+            ->forUser()
+            ->create();
     }
 }
