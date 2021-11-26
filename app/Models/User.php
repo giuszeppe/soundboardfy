@@ -41,4 +41,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function liked_soundboards()
+    {
+        return $this->belongsToMany(Soundboard::class,'soundboards_users');    
+
+    }
+    public function soundboards()
+    {
+        return $this->hasMany(Soundboard::class);    
+    }
+
 }
