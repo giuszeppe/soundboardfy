@@ -14,7 +14,7 @@ class SoundboardController extends Controller
      */
     public function index()
     {
-        //
+        return json_encode(Soundboard::all());
     }
 
     /**
@@ -78,8 +78,4 @@ class SoundboardController extends Controller
      * @param  \App\Models\Soundboard  $soundboard
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Soundboard $soundboard)
-    {
-        //
-    }
 }
