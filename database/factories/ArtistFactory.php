@@ -15,7 +15,7 @@ class ArtistFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
-            'image_path' => $this->faker->image('/public/storage/images',640,480,null,false),
+            'image_path' => $this->faker->image('/public/storage',640,480,null,false),
             'bio' => $this->faker->text(50)
         ];
     }
